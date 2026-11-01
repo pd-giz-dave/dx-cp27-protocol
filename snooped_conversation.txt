@@ -1,0 +1,554 @@
+No.	Time	Delta	Source	Destination	Protocol	Length	Info
+16428	1040.088755		ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	12	Rcvd Exchange MTU Request, Client Rx MTU: 256
+16440	1040.096856	0.008101	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Device Name, Handles: 0x0001..0xffff
+16442	1040.098765	0.001909	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	12	Sent Exchange MTU Response, Server Rx MTU: 517
+16470	1040.234971	0.136206	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	22	Rcvd Read By Type Response, Attribute List Length: 1
+16485	1040.334383	0.099412	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Database Hash, Handles: 0x0001..0xffff
+16498	1040.429236	0.094853	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0001 (Unknown)
+16500	1040.430210	0.000974	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Group Type Request, Primary Service, Handles: 0x0001..0xffff
+16514	1040.527452	0.097242	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	41	Rcvd Read By Group Type Response, Attribute List Length: 5, GAP, GATT, Battery, Device Information, Unknown
+16515	1040.528242	0.000790	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Group Type Request, Primary Service, Handles: 0x0026..0xffff
+16526	1040.624474	0.096232	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0026 (Unknown: Unknown)
+16527	1040.625750	0.001276	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x0001..0x0005
+16539	1040.722102	0.096352	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0001 (GAP)
+16540	1040.723744	0.001642	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0001..0x0005
+16549	1040.781709	0.057965	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	25	Rcvd Read By Type Response, Attribute List Length: 2, Device Name, Appearance
+16550	1040.782391	0.000682	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0005..0x0005
+16554	1040.804663	0.022272	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0005 (GAP: Appearance)
+16555	1040.806822	0.002159	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x0006..0x0009
+16559	1040.819312	0.012490	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0006 (GATT)
+16560	1040.820244	0.000932	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0006..0x0009
+16564	1040.834327	0.014083	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Read By Type Response, Attribute List Length: 1, Service Changed
+16565	1040.835266	0.000939	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0008..0x0009
+16568	1040.849442	0.014176	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0008 (GATT: Service Changed)
+16569	1040.850921	0.001479	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0009..0x0009
+16572	1040.864461	0.013540	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0009 (GATT: Service Changed: Client Characteristic Configuration)
+16573	1040.865563	0.001102	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x000a..0x000d
+16578	1040.886875	0.021312	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000a (Battery)
+16579	1040.888001	0.001126	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000a..0x000d
+16583	1040.901933	0.013932	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Read By Type Response, Attribute List Length: 1, Battery Level
+16584	1040.902831	0.000898	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000c..0x000d
+16588	1040.916704	0.013873	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000c (Battery: Battery Level)
+16589	1040.917918	0.001214	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x000d..0x000d
+16592	1040.931935	0.014017	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x000d (Battery: Battery Level: Client Characteristic Configuration)
+16593	1040.933289	0.001354	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x000e..0x001a
+16597	1040.946772	0.013483	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000e (Device Information)
+16598	1040.948094	0.001322	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000e..0x001a
+16602	1040.977764	0.029670	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	53	Rcvd Read By Type Response, Attribute List Length: 6, Manufacturer Name String, Model Number String, Firmware Revision String, Software Revision String, System ID, PnP ID
+16603	1040.979873	0.002109	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x001a..0x001a
+16607	1040.992171	0.012298	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x001a (Device Information: PnP ID)
+16609	1040.995826	0.003655	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x001b..0x0025
+16612	1041.007129	0.011303	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x001b (Unknown)
+16613	1041.009110	0.001981	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x001b..0x0025
+16616	1041.022639	0.013529	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	32	Rcvd Read By Type Response, Attribute List Length: 3, Unknown, Unknown, Unknown
+16617	1041.024731	0.002092	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0024..0x0025
+16622	1041.038102	0.013371	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0024 (Unknown: Unknown)
+16624	1041.041379	0.003277	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x001e..0x001f
+16629	1041.059968	0.018589	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Find Information Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration), Handle: 0x001f (Unknown: Unknown: Characteristic User Description)
+16630	1041.062026	0.002058	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0022..0x0022
+16634	1041.075054	0.013028	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0022 (Unknown: Unknown: Characteristic User Description)
+16635	1041.076697	0.001643	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0025..0x0025
+16638	1041.089827	0.013130	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0025 (Unknown: Unknown: Characteristic User Description)
+16644	1041.116220	0.026393	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Write Request, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+16647	1041.134845	0.018625	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+16662	1041.253824	0.118979	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+16666	1041.285640	0.031816	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+16668	1041.286509	0.000869	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+17191	1049.641132	8.354623	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	18	Sent Write Request, Handle: 0x0024 (Unknown: Unknown)
+17196	1049.670487	0.029355	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0024 (Unknown: Unknown)
+17207	1049.772897	0.102410	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+17211	1049.790601	0.017704	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+17212	1049.791164	0.000563	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+17230	1049.945252	0.154088	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+17237	1049.971134	0.025882	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+17238	1049.972120	0.000986	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	46	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+17253	1050.114171	0.142051	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+17257	1050.135755	0.021584	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+17258	1050.136877	0.001122	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	39	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+17288	1050.414675	0.277798	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+17292	1050.435939	0.021264	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+17293	1050.436923	0.000984	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	37	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+17309	1050.582210	0.145287	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+17313	1050.601162	0.018952	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+17314	1050.602381	0.001219	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+17353	1050.985704	0.383323	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+17357	1051.006155	0.020451	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+17358	1051.007343	0.001188	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+17374	1051.153880	0.146537	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+17379	1051.185740	0.031860	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+17380	1051.186610	0.000870	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	73	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+17407	1051.442080	0.255470	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+17412	1051.470656	0.028576	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+17413	1051.471151	0.000495	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+17873	1067.400799	15.929648	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	12	Rcvd Exchange MTU Request, Client Rx MTU: 256
+17875	1067.402646	0.001847	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Device Name, Handles: 0x0001..0xffff
+17878	1067.404345	0.001699	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	12	Sent Exchange MTU Response, Server Rx MTU: 517
+17899	1067.497617	0.093272	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	22	Rcvd Read By Type Response, Attribute List Length: 1
+17905	1067.595741	0.098124	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Database Hash, Handles: 0x0001..0xffff
+17913	1067.740748	0.145007	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0001 (GAP)
+17915	1067.749379	0.008631	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Group Type Request, Primary Service, Handles: 0x0001..0xffff
+17928	1067.838506	0.089127	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	41	Rcvd Read By Group Type Response, Attribute List Length: 5, GAP, GATT, Battery, Device Information, Unknown
+17929	1067.839636	0.001130	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Group Type Request, Primary Service, Handles: 0x0026..0xffff
+17940	1067.936059	0.096423	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0026 (Unknown: Unknown: Unknown)
+17941	1067.938214	0.002155	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x0001..0x0005
+17955	1068.033985	0.095771	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0001 (GAP)
+17956	1068.035679	0.001694	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0001..0x0005
+17965	1068.097493	0.061814	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	25	Rcvd Read By Type Response, Attribute List Length: 2, Device Name, Appearance
+17967	1068.099013	0.001520	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0005..0x0005
+17971	1068.119966	0.020953	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0005 (GAP: Appearance)
+17972	1068.122404	0.002438	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x0006..0x0009
+17976	1068.134623	0.012219	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0006 (GATT)
+17977	1068.136244	0.001621	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0006..0x0009
+17980	1068.149612	0.013368	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Read By Type Response, Attribute List Length: 1, Service Changed
+17982	1068.152546	0.002934	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0008..0x0009
+17985	1068.164968	0.012422	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0008 (GATT: Service Changed)
+17986	1068.168178	0.003210	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0009..0x0009
+17990	1068.179685	0.011507	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0009 (GATT: Service Changed: Client Characteristic Configuration)
+17991	1068.181966	0.002281	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x000a..0x000d
+17995	1068.209763	0.027797	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000a (Battery)
+17997	1068.212553	0.002790	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000a..0x000d
+18000	1068.224460	0.011907	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Read By Type Response, Attribute List Length: 1, Battery Level
+18001	1068.225514	0.001054	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000c..0x000d
+18005	1068.239536	0.014022	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000c (Battery: Battery Level)
+18006	1068.241596	0.002060	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x000d..0x000d
+18009	1068.254829	0.013233	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x000d (Battery: Battery Level: Client Characteristic Configuration)
+18010	1068.256839	0.002010	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x000e..0x001a
+18015	1068.277181	0.020342	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000e (Device Information)
+18016	1068.279115	0.001934	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000e..0x001a
+18019	1068.292271	0.013156	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	53	Rcvd Read By Type Response, Attribute List Length: 6, Manufacturer Name String, Model Number String, Firmware Revision String, Software Revision String, System ID, PnP ID
+18020	1068.293312	0.001041	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x001a..0x001a
+18023	1068.307280	0.013968	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x001a (Device Information: PnP ID)
+18024	1068.310725	0.003445	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x001b..0x0025
+18027	1068.322470	0.011745	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x001b (Unknown)
+18028	1068.324303	0.001833	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x001b..0x0025
+18033	1068.337530	0.013227	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	32	Rcvd Read By Type Response, Attribute List Length: 3, Unknown, Unknown, Unknown
+18034	1068.339154	0.001624	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0024..0x0025
+18038	1068.359804	0.020650	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0024 (Unknown: Unknown)
+18039	1068.364429	0.004625	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x001e..0x001f
+18045	1068.375723	0.011294	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Find Information Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration), Handle: 0x001f (Unknown: Unknown: Characteristic User Description)
+18046	1068.377098	0.001375	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0022..0x0022
+18049	1068.389912	0.012814	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0022 (Unknown: Unknown: Characteristic User Description)
+18051	1068.392784	0.002872	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0025..0x0025
+18054	1068.404849	0.012065	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0025 (Unknown: Unknown: Characteristic User Description)
+18059	1068.423515	0.018666	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Write Request, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+18063	1068.441911	0.018396	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+18076	1068.557220	0.115309	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+18081	1068.585697	0.028477	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+18082	1068.586351	0.000654	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+18765	1077.030369	8.444018	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	18	Sent Write Request, Handle: 0x0024 (Unknown: Unknown)
+18770	1077.060617	0.030248	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0024 (Unknown: Unknown)
+18781	1077.155464	0.094847	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+18785	1077.180723	0.025259	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+18786	1077.181562	0.000839	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+18805	1077.339520	0.157958	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+18809	1077.360823	0.021303	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+18810	1077.362277	0.001454	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	46	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+18824	1077.492875	0.130598	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+18828	1077.510642	0.017767	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+18829	1077.511321	0.000679	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	39	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+18855	1077.759837	0.248516	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+18859	1077.780644	0.020807	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+18860	1077.782039	0.001395	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	37	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+18874	1077.912592	0.130553	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+18878	1077.930752	0.018160	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+18879	1077.931435	0.000683	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+18915	1078.280213	0.348778	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+18919	1078.305840	0.025627	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+18920	1078.306591	0.000751	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+18936	1078.449204	0.142613	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+18940	1078.470581	0.021377	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+18941	1078.471691	0.001110	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	73	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+18967	1078.714074	0.242383	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+18972	1078.740524	0.026450	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+18973	1078.741045	0.000521	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+19597	1094.201197	15.460152	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+19603	1094.220748	0.019551	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+19604	1094.221427	0.000679	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	39	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+21998	1168.917984	74.696557	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22000	1168.952031	0.034047	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22001	1168.952732	0.000701	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22007	1169.123927	0.171195	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22009	1169.146976	0.023049	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22017	1169.317439	0.170463	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	33	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22022	1169.341685	0.024246	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22023	1169.342710	0.001025	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22043	1169.521808	0.179098	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	19	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22048	1169.552105	0.030297	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22049	1169.552658	0.000553	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22067	1169.720321	0.167663	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	19	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22072	1169.746737	0.026416	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22073	1169.750971	0.004234	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22092	1169.923687	0.172716	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	18	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22096	1169.942024	0.018337	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22097	1169.943004	0.000980	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22116	1170.126731	0.183727	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	18	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22120	1170.152108	0.025377	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22121	1170.153263	0.001155	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22140	1170.327124	0.173861	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	18	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22144	1170.346744	0.019620	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22145	1170.347606	0.000862	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22166	1170.542750	0.195144	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22172	1170.586375	0.043625	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22173	1170.586911	0.000536	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22190	1170.741769	0.154858	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22194	1170.766426	0.024657	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22195	1170.767025	0.000599	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22327	1172.995127	2.228102	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22329	1173.016196	0.021069	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22330	1173.016827	0.000631	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22331	1173.045029	0.028202	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22333	1173.076641	0.031612	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22334	1173.077099	0.000458	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	39	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22342	1176.500215	3.423116	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22344	1176.526458	0.026243	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22345	1176.527294	0.000836	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	37	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22891	1183.258790	6.731496	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22895	1183.276410	0.017620	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22896	1183.276925	0.000515	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	13	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22915	1183.458935	0.182010	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22921	1183.486294	0.027359	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22922	1183.487108	0.000814	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+22940	1183.663536	0.176428	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22944	1183.681886	0.018350	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22967	1183.865617	0.183731	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+22972	1183.891727	0.026110	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+22973	1183.892497	0.000770	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+23207	1186.104705	2.212208	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+23217	1186.126388	0.021683	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+23218	1186.126960	0.000572	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+23237	1188.525982	2.399022	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+23239	1188.556431	0.030449	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+23240	1188.557079	0.000648	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+23625	1193.403917	4.846838	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+23630	1193.431400	0.027483	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+23631	1193.431890	0.000490	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	13	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+23649	1193.605021	0.173131	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+23653	1193.626550	0.021529	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+23654	1193.627123	0.000573	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+23673	1193.808500	0.181377	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+23680	1193.837419	0.028919	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+23699	1194.011523	0.174104	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+23703	1194.032025	0.020502	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+23704	1194.032689	0.000664	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+23937	1196.261134	2.228445	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+23949	1196.281331	0.020197	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+23950	1196.282088	0.000757	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+23959	1200.204799	3.922711	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+23961	1200.226766	0.021967	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+23962	1200.227323	0.000557	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	39	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+24364	1223.408261	23.180938	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+24366	1223.431765	0.023504	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+24367	1223.432270	0.000505	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+24368	1223.608694	0.176424	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+24370	1223.642695	0.034001	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+24373	1223.813642	0.170947	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	33	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+24375	1223.837246	0.023604	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+24376	1223.838355	0.001109	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+24377	1224.014778	0.176423	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	19	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+24379	1224.047481	0.032703	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+24380	1224.049039	0.001558	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+24388	1224.216037	0.166998	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	19	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+24393	1224.242409	0.026372	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+24394	1224.243313	0.000904	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+24411	1224.417568	0.174255	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	18	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+24415	1224.437120	0.019552	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+24416	1224.438132	0.001012	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+24439	1224.623092	0.184960	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	18	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+24443	1224.647300	0.024208	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+24444	1224.648398	0.001098	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+24463	1224.822145	0.173747	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	18	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+24467	1224.842089	0.019944	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+24468	1224.842587	0.000498	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+24487	1225.023955	0.181368	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+24492	1225.052248	0.028293	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+24493	1225.052771	0.000523	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+24511	1225.225619	0.172848	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+24515	1225.247275	0.021656	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+24516	1225.248291	0.001016	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+24649	1227.514852	2.266561	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+24651	1227.541577	0.026725	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+24652	1227.542137	0.000560	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+24653	1227.553826	0.011689	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+24655	1227.587439	0.033613	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+24656	1227.588491	0.001052	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	39	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+25294	1241.699070	14.110579	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+25296	1241.716779	0.017709	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+25297	1241.717349	0.000570	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+25797	1253.188708	11.471359	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	12	Rcvd Exchange MTU Request, Client Rx MTU: 256
+25799	1253.191196	0.002488	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Device Name, Handles: 0x0001..0xffff
+25802	1253.192676	0.001480	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	12	Sent Exchange MTU Response, Server Rx MTU: 517
+25824	1253.334365	0.141689	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	22	Rcvd Read By Type Response, Attribute List Length: 1
+25831	1253.432559	0.098194	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Database Hash, Handles: 0x0001..0xffff
+25834	1253.530402	0.097843	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0001 (GAP)
+25836	1253.534109	0.003707	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Group Type Request, Primary Service, Handles: 0x0001..0xffff
+25839	1253.626912	0.092803	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	41	Rcvd Read By Group Type Response, Attribute List Length: 5, GAP, GATT, Battery, Device Information, Unknown
+25840	1253.629347	0.002435	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Group Type Request, Primary Service, Handles: 0x0026..0xffff
+25845	1253.772899	0.143552	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0026 (Unknown: Unknown: Unknown)
+25846	1253.775852	0.002953	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x0001..0x0005
+25853	1253.873650	0.097798	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0001 (GAP)
+25855	1253.883548	0.009898	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0001..0x0005
+25857	1253.903728	0.020180	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	25	Rcvd Read By Type Response, Attribute List Length: 2, Device Name, Appearance
+25859	1253.907583	0.003855	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0005..0x0005
+25861	1253.918984	0.011401	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0005 (GAP: Appearance)
+25862	1253.921547	0.002563	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x0006..0x0009
+25866	1253.934090	0.012543	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0006 (GATT)
+25867	1253.935805	0.001715	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0006..0x0009
+25871	1253.948675	0.012870	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Read By Type Response, Attribute List Length: 1, Service Changed
+25872	1253.951030	0.002355	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0008..0x0009
+25875	1253.963658	0.012628	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0008 (GATT: Service Changed)
+25876	1253.967305	0.003647	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0009..0x0009
+25881	1253.986070	0.018765	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0009 (GATT: Service Changed: Client Characteristic Configuration)
+25882	1253.988124	0.002054	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x000a..0x000d
+25885	1254.001811	0.013687	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000a (Battery)
+25886	1254.003842	0.002031	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000a..0x000d
+25890	1254.017260	0.013418	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Read By Type Response, Attribute List Length: 1, Battery Level
+25891	1254.019060	0.001800	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000c..0x000d
+25894	1254.031554	0.012494	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000c (Battery: Battery Level)
+25896	1254.035383	0.003829	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x000d..0x000d
+25899	1254.046116	0.010733	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x000d (Battery: Battery Level: Client Characteristic Configuration)
+25900	1254.048118	0.002002	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x000e..0x001a
+25904	1254.069268	0.021150	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000e (Device Information)
+25905	1254.071088	0.001820	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000e..0x001a
+25908	1254.083952	0.012864	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	53	Rcvd Read By Type Response, Attribute List Length: 6, Manufacturer Name String, Model Number String, Firmware Revision String, Software Revision String, System ID, PnP ID
+25910	1254.087351	0.003399	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x001a..0x001a
+25913	1254.098675	0.011324	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x001a (Device Information: PnP ID)
+25914	1254.102444	0.003769	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x001b..0x0025
+25917	1254.113631	0.011187	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x001b (Unknown)
+25918	1254.116145	0.002514	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x001b..0x0025
+25922	1254.129033	0.012888	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	32	Rcvd Read By Type Response, Attribute List Length: 3, Unknown, Unknown, Unknown
+25923	1254.131106	0.002073	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0024..0x0025
+25927	1254.151130	0.020024	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0024 (Unknown: Unknown)
+25929	1254.155561	0.004431	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x001e..0x001f
+25935	1254.167583	0.012022	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Find Information Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration), Handle: 0x001f (Unknown: Unknown: Characteristic User Description)
+25936	1254.169107	0.001524	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0022..0x0022
+25939	1254.181240	0.012133	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0022 (Unknown: Unknown: Characteristic User Description)
+25940	1254.183566	0.002326	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0025..0x0025
+25944	1254.195977	0.012411	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0025 (Unknown: Unknown: Characteristic User Description)
+25949	1254.221905	0.025928	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Write Request, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+25953	1254.240945	0.019040	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+25968	1254.371524	0.130579	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+25972	1254.391746	0.020222	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+25973	1254.392342	0.000596	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+26012	1254.769656	0.377314	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Write Request, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+26017	1254.797246	0.027590	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+26024	1254.862964	0.065718	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+26029	1254.888072	0.025108	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+26030	1254.888484	0.000412	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+26633	1263.375085	8.486601	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	18	Sent Write Request, Handle: 0x0024 (Unknown: Unknown)
+26638	1263.406997	0.031912	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0024 (Unknown: Unknown)
+26651	1263.508284	0.101287	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+26655	1263.526973	0.018689	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+26656	1263.527270	0.000297	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+26671	1263.663511	0.136241	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+26676	1263.692138	0.028627	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+26677	1263.692582	0.000444	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	46	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+26691	1263.829455	0.136873	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+26697	1263.857040	0.027585	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+26698	1263.858020	0.000980	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	39	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+26715	1264.018808	0.160788	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+26718	1264.037168	0.018360	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+26719	1264.038076	0.000908	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	35	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+26735	1264.183933	0.145857	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+26740	1264.217453	0.033520	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+26741	1264.218635	0.001182	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	37	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+26758	1264.371559	0.152924	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+26762	1264.397222	0.025663	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+26763	1264.399018	0.001796	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+26808	1264.795421	0.396403	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+26812	1264.817358	0.021937	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+26813	1264.818761	0.001403	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+26832	1264.974782	0.156021	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+26836	1264.997233	0.022451	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+26837	1264.998680	0.001447	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	73	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+26868	1265.262617	0.263937	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+26872	1265.281732	0.019115	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+26873	1265.282756	0.001024	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+27000	1270.256316	4.973560	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+27002	1270.277310	0.020994	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+27003	1270.277878	0.000568	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	39	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+27315	1274.499941	4.222063	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+27317	1274.536753	0.036812	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+27318	1274.537604	0.000851	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+28863	1300.338509	25.800905	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	23	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+28865	1300.366868	0.028359	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+28866	1300.367397	0.000529	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+28874	1300.582383	0.214986	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+28876	1300.606856	0.024473	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+28877	1300.607387	0.000531	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+29633	1308.508649	7.901262	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+29637	1308.526765	0.018116	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+29638	1308.527380	0.000615	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+30411	1326.411968	17.884588	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	12	Rcvd Exchange MTU Request, Client Rx MTU: 256
+30413	1326.417198	0.005230	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Device Name, Handles: 0x0001..0xffff
+30418	1326.419977	0.002779	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	12	Sent Exchange MTU Response, Server Rx MTU: 517
+30449	1326.507544	0.087567	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	22	Rcvd Read By Type Response, Attribute List Length: 1
+30462	1326.606656	0.099112	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Database Hash, Handles: 0x0001..0xffff
+30477	1326.702659	0.096003	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0001 (GAP)
+30481	1326.706813	0.004154	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Group Type Request, Primary Service, Handles: 0x0001..0xffff
+30492	1326.799840	0.093027	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	41	Rcvd Read By Group Type Response, Attribute List Length: 5, GAP, GATT, Battery, Device Information, Unknown
+30493	1326.800871	0.001031	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Group Type Request, Primary Service, Handles: 0x0026..0xffff
+30505	1326.898062	0.097191	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0026 (Unknown: Unknown: Unknown)
+30507	1326.900648	0.002586	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x0001..0x0005
+30518	1326.995491	0.094843	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0001 (GAP)
+30519	1326.997643	0.002152	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0001..0x0005
+30529	1327.058965	0.061322	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	25	Rcvd Read By Type Response, Attribute List Length: 2, Device Name, Appearance
+30530	1327.060889	0.001924	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0005..0x0005
+30534	1327.081122	0.020233	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0005 (GAP: Appearance)
+30535	1327.084038	0.002916	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x0006..0x0009
+30538	1327.096422	0.012384	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0006 (GATT)
+30540	1327.099500	0.003078	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0006..0x0009
+30542	1327.111414	0.011914	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Read By Type Response, Attribute List Length: 1, Service Changed
+30543	1327.113850	0.002436	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0008..0x0009
+30548	1327.126957	0.013107	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0008 (GATT: Service Changed)
+30549	1327.130411	0.003454	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0009..0x0009
+30552	1327.141076	0.010665	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0009 (GATT: Service Changed: Client Characteristic Configuration)
+30553	1327.143040	0.001964	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x000a..0x000d
+30557	1327.163537	0.020497	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000a (Battery)
+30559	1327.165300	0.001763	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000a..0x000d
+30562	1327.178951	0.013651	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Read By Type Response, Attribute List Length: 1, Battery Level
+30563	1327.180614	0.001663	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000c..0x000d
+30566	1327.194572	0.013958	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000c (Battery: Battery Level)
+30567	1327.197017	0.002445	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x000d..0x000d
+30571	1327.209163	0.012146	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x000d (Battery: Battery Level: Client Characteristic Configuration)
+30573	1327.211712	0.002549	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x000e..0x001a
+30576	1327.223691	0.011979	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000e (Device Information)
+30577	1327.225663	0.001972	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000e..0x001a
+30582	1327.246924	0.021261	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	53	Rcvd Read By Type Response, Attribute List Length: 6, Manufacturer Name String, Model Number String, Firmware Revision String, Software Revision String, System ID, PnP ID
+30583	1327.248746	0.001822	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x001a..0x001a
+30586	1327.261463	0.012717	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x001a (Device Information: PnP ID)
+30587	1327.265492	0.004029	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x001b..0x0025
+30590	1327.276260	0.010768	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x001b (Unknown)
+30592	1327.279898	0.003638	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x001b..0x0025
+30595	1327.291741	0.011843	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	32	Rcvd Read By Type Response, Attribute List Length: 3, Unknown, Unknown, Unknown
+30596	1327.294381	0.002640	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0024..0x0025
+30600	1327.306023	0.011642	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0024 (Unknown: Unknown)
+30601	1327.310538	0.004515	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x001e..0x001f
+30605	1327.328889	0.018351	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Find Information Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration), Handle: 0x001f (Unknown: Unknown: Characteristic User Description)
+30606	1327.330777	0.001888	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0022..0x0022
+30609	1327.343814	0.013037	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0022 (Unknown: Unknown: Characteristic User Description)
+30610	1327.345873	0.002059	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0025..0x0025
+30614	1327.359168	0.013295	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0025 (Unknown: Unknown: Characteristic User Description)
+30619	1327.382675	0.023507	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Write Request, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+30625	1327.396982	0.014307	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+30641	1327.516543	0.119561	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+30653	1327.617515	0.100972	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+30655	1327.618568	0.001053	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+31315	1336.753158	9.134590	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	18	Sent Write Request, Handle: 0x0024 (Unknown: Unknown)
+31319	1336.771992	0.018834	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0024 (Unknown: Unknown)
+31333	1336.886644	0.114652	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+31338	1336.906950	0.020306	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+31339	1336.907707	0.000757	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+31357	1337.056887	0.149180	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+31363	1337.087961	0.031074	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+31364	1337.089561	0.001600	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	46	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+31378	1337.228182	0.138621	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+31383	1337.252214	0.024032	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+31384	1337.252673	0.000459	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	39	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+31399	1337.395438	0.142765	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+31403	1337.417448	0.022010	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+31404	1337.418531	0.001083	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	35	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+31421	1337.578317	0.159786	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+31425	1337.597348	0.019031	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+31426	1337.598354	0.001006	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	37	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+31441	1337.732403	0.134049	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+31446	1337.762546	0.030143	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+31447	1337.763038	0.000492	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+31487	1338.151708	0.388670	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+31492	1338.182603	0.030895	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+31493	1338.183544	0.000941	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+31511	1338.335231	0.151687	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+31516	1338.362545	0.027314	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+31517	1338.363503	0.000958	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	73	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+31547	1338.642011	0.278508	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+31551	1338.662286	0.020275	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+31552	1338.662774	0.000488	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+32118	1346.258519	7.595745	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+32122	1346.282037	0.023518	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+32123	1346.282537	0.000500	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+32711	1353.066183	6.783646	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	12	Rcvd Exchange MTU Request, Client Rx MTU: 256
+32713	1353.068509	0.002326	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Device Name, Handles: 0x0001..0xffff
+32716	1353.070546	0.002037	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	12	Sent Exchange MTU Response, Server Rx MTU: 517
+32738	1353.163052	0.092506	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	22	Rcvd Read By Type Response, Attribute List Length: 1
+32742	1353.262396	0.099344	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Database Hash, Handles: 0x0001..0xffff
+32754	1353.406051	0.143655	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0001 (GAP)
+32756	1353.409014	0.002963	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Group Type Request, Primary Service, Handles: 0x0001..0xffff
+32771	1353.504327	0.095313	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	41	Rcvd Read By Group Type Response, Attribute List Length: 5, GAP, GATT, Battery, Device Information, Unknown
+32772	1353.506460	0.002133	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Group Type Request, Primary Service, Handles: 0x0026..0xffff
+32784	1353.601317	0.094857	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0026 (Unknown: Unknown: Unknown)
+32785	1353.604780	0.003463	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x0001..0x0005
+32798	1353.699061	0.094281	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0001 (GAP)
+32800	1353.701338	0.002277	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0001..0x0005
+32808	1353.759053	0.057715	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	25	Rcvd Read By Type Response, Attribute List Length: 2, Device Name, Appearance
+32809	1353.761339	0.002286	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0005..0x0005
+32813	1353.773613	0.012274	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0005 (GAP: Appearance)
+32814	1353.775749	0.002136	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x0006..0x0009
+32817	1353.789301	0.013552	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0006 (GATT)
+32818	1353.791244	0.001943	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0006..0x0009
+32824	1353.811280	0.020036	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Read By Type Response, Attribute List Length: 1, Service Changed
+32826	1353.814137	0.002857	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0008..0x0009
+32829	1353.826339	0.012202	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0008 (GATT: Service Changed)
+32830	1353.829158	0.002819	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0009..0x0009
+32833	1353.841269	0.012111	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0009 (GATT: Service Changed: Client Characteristic Configuration)
+32834	1353.842886	0.001617	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x000a..0x000d
+32838	1353.856697	0.013811	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000a (Battery)
+32839	1353.858690	0.001993	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000a..0x000d
+32842	1353.871431	0.012741	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Read By Type Response, Attribute List Length: 1, Battery Level
+32844	1353.874396	0.002965	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000c..0x000d
+32848	1353.893991	0.019595	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000c (Battery: Battery Level)
+32849	1353.897014	0.003023	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x000d..0x000d
+32852	1353.908767	0.011753	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x000d (Battery: Battery Level: Client Characteristic Configuration)
+32853	1353.910730	0.001963	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x000e..0x001a
+32857	1353.924107	0.013377	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000e (Device Information)
+32858	1353.926107	0.002000	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000e..0x001a
+32861	1353.939285	0.013178	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	53	Rcvd Read By Type Response, Attribute List Length: 6, Manufacturer Name String, Model Number String, Firmware Revision String, Software Revision String, System ID, PnP ID
+32862	1353.941551	0.002266	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x001a..0x001a
+32866	1353.953844	0.012293	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x001a (Device Information: PnP ID)
+32867	1353.957363	0.003519	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Include, Handles: 0x001b..0x0025
+32871	1353.976604	0.019241	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x001b (Unknown)
+32872	1353.978736	0.002132	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x001b..0x0025
+32875	1353.991542	0.012806	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	32	Rcvd Read By Type Response, Attribute List Length: 3, Unknown, Unknown, Unknown
+32877	1353.994677	0.003135	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0024..0x0025
+32880	1354.006663	0.011986	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0024 (Unknown: Unknown)
+32882	1354.009147	0.002484	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x001e..0x001f
+32888	1354.021657	0.012510	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Find Information Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration), Handle: 0x001f (Unknown: Unknown: Characteristic User Description)
+32889	1354.023765	0.002108	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0022..0x0022
+32892	1354.036444	0.012679	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0022 (Unknown: Unknown: Characteristic User Description)
+32893	1354.038637	0.002193	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Find Information Request, Handles: 0x0025..0x0025
+32897	1354.058988	0.020351	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0025 (Unknown: Unknown: Characteristic User Description)
+32902	1354.077779	0.018791	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	14	Sent Write Request, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+32905	1354.088906	0.011127	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+32921	1354.227903	0.138997	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+32925	1354.247418	0.019515	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+32926	1354.248391	0.000973	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+33538	1362.185461	7.937070	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	18	Sent Write Request, Handle: 0x0024 (Unknown: Unknown)
+33544	1362.212207	0.026746	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0024 (Unknown: Unknown)
+33556	1362.320635	0.108428	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+33560	1362.347102	0.026467	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+33561	1362.347611	0.000509	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+33577	1362.494049	0.146438	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+33584	1362.527058	0.033009	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+33585	1362.528256	0.001198	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	46	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+33603	1362.678494	0.150238	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+33610	1362.707855	0.029361	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+33611	1362.708788	0.000933	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	39	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+33628	1362.845643	0.136855	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+33633	1362.872715	0.027072	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+33634	1362.873621	0.000906	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	35	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+33651	1363.014404	0.140783	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+33655	1363.037249	0.022845	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+33656	1363.038061	0.000812	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	37	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+33673	1363.197921	0.159860	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+33677	1363.217755	0.019834	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+33678	1363.218821	0.001066	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+33716	1363.584296	0.365475	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+33720	1363.607415	0.023119	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+33721	1363.608384	0.000969	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	15	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+33738	1363.770840	0.162456	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+33744	1363.802528	0.031688	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+33745	1363.804262	0.001734	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	73	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+33772	1364.069066	0.264804	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+33776	1364.087051	0.017985	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+33777	1364.087556	0.000505	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+34179	1371.749598	7.662042	localhost (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 (CP27-4236)	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+34183	1371.766966	0.017368	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+34184	1371.767975	0.001009	ShenZhenDaXi_9e:42:36 (CP27-4236)	localhost (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
