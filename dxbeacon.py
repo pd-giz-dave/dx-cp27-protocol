@@ -35,6 +35,17 @@ URL_SCHEMES = {0: "http://www.", 1: "https://www.", 2: "http://", 3: "https://"}
 URL_EXPANSIONS = [".com/", ".org/", ".edu/", ".net/", ".info/", ".biz/", ".gov/",
                   ".com", ".org", ".edu", ".net", ".info", ".biz", ".gov"]
 
+# Trigger: a one-shot action the beacon can take on a button double/triple
+# click or on being picked up and moved. 0xa2 sets it (data: type, seconds -
+# how long the beacon advertises after the trigger fires, 1-100), in place of
+# the normal 0xA0 save, and must be followed by an 0xa1 call before 0x60
+# apply or it doesn't commit - the app always does this, even though 0xa1's
+# reply is junk. Read the actual state back via the iBeacon frame's own
+# trailer instead (see _params below).
+TRIGGER_NAMES = {0: "off", 1: "double-click", 2: "triple-click", 3: "move"}
+TRIGGER_CODES = {v: k for k, v in TRIGGER_NAMES.items()}
+DEFAULT_TRIGGER_SECONDS = 0x1E
+
 
 class ProtocolError(Exception):
     pass
@@ -57,8 +68,17 @@ def build_frame(cmd: int, data: bytes = b"") -> bytes:
 # --------------------------------------------------------------------------
 
 def _params(trailer: bytes) -> dict:
-    # Common trailer on every frame: interval, global TX power, 3 reserved bytes
-    return {"interval": trailer[0], "tx_power": trailer[1], "reserved": trailer[2:].hex()}
+    # Common trailer on every frame: interval, global TX power, then the
+    # trigger state (enabled flag, mode, seconds) - not just "reserved".
+    d = {"interval": trailer[0], "tx_power": trailer[1]}
+    reserved = trailer[2:]
+    if len(reserved) >= 3:
+        d["trigger"] = TRIGGER_NAMES.get(reserved[1], f"0x{reserved[1]:02x}") if reserved[0] else "off"
+        if reserved[0]:
+            d["trigger_seconds"] = reserved[2]
+    else:
+        d["reserved"] = reserved.hex()
+    return d
 
 
 def decode_url(field: bytes) -> str:
@@ -197,7 +217,20 @@ class DXBeacon:
 
     # ---- writes ----
 
-    async def set_ibeacon(self, slot, uuid, major, minor, mpower, interval, tx):
+    async def set_ibeacon(self, slot, uuid, major, minor, mpower, interval, tx,
+                           trigger=None, trigger_seconds=None):
+        # trigger=None keeps whatever trigger is currently set. Passing a type
+        # code (see TRIGGER_NAMES) changes it; 0 ("off") clears it.
+        # trigger_seconds is how long the beacon advertises once triggered, 1-100.
+        # 0xA1 ("read trigger") returns junk - the iBeacon frame's own trailer
+        # is the only reliable way to read the current trigger back.
+        if trigger is None:
+            cur = parse_frame(await self.send(0x62))
+            trigger = TRIGGER_CODES.get(cur.get("trigger"), 0)
+            trigger_seconds = cur.get("trigger_seconds", DEFAULT_TRIGGER_SECONDS)
+        elif trigger_seconds is None:
+            trigger_seconds = DEFAULT_TRIGGER_SECONDS
+
         await self.send_ack(0x10 + slot)
         await self.send(0x62, expect_reply=False)  # set slot frame type
         await self.send_ack(0x74, uuid)
@@ -206,7 +239,13 @@ class DXBeacon:
         await self.send_ack(0x77, mpower.to_bytes(1, "big", signed=True))
         await self.send_ack(0x78, bytes([interval]))
         await self.send_ack(0x79, bytes([tx]))
-        await self.send_ack(0xA0)  # save
+        if trigger:
+            await self.send_ack(0xA2, bytes([trigger, trigger_seconds]))  # set trigger + save
+            await self.send(0xA1)  # app always reads it back here; reply is junk, but the
+                                    # firmware seems to need this call before 0x60 or the
+                                    # trigger doesn't actually commit. Ignore the reply.
+        else:
+            await self.send_ack(0xA0)  # save (also clears any trigger)
         await self.send_ack(0x60)  # apply
 
     async def set_uid(self, slot, namespace, instance, mpower, interval, tx):
@@ -317,11 +356,25 @@ async def run(args):
                     return conv(cur[name])
                 sys.exit(f"--{name.replace('_', '-')} is required (no existing iBeacon frame to copy from)")
             uuid = args.uuid if args.uuid is not None else pick("uuid", None, lambda u: hexbytes(u, 16))
+            trigger = TRIGGER_CODES[args.trigger] if args.trigger is not None else None
             await b.set_ibeacon(args.slot, uuid,
                                 pick("major", args.major), pick("minor", args.minor),
                                 pick("measured_power", args.measured_power),
-                                pick("interval", args.interval), pick("tx_power", args.tx_power))
+                                pick("interval", args.interval), pick("tx_power", args.tx_power),
+                                trigger=trigger, trigger_seconds=args.trigger_seconds)
             print("Done. New iBeacon frame:")
+            print_dict(await b.read_frame(0x62))
+
+        elif args.command == "set-trigger":
+            try:
+                cur = await b.read_frame(0x62)
+            except ProtocolError:
+                sys.exit("No existing iBeacon frame on this slot - set one with 'set-ibeacon' first")
+            await b.set_ibeacon(args.slot, hexbytes(cur["uuid"], 16),
+                                cur["major"], cur["minor"], cur["measured_power"],
+                                cur["interval"], cur["tx_power"],
+                                trigger=TRIGGER_CODES[args.trigger], trigger_seconds=args.seconds)
+            print(f"Trigger set to {args.trigger!r}. New iBeacon frame:")
             print_dict(await b.read_frame(0x62))
 
         elif args.command == "set-uid":
@@ -413,6 +466,18 @@ def main():
     s.add_argument("--measured-power", type=int, help="RSSI at 1 m, e.g. -57")
     s.add_argument("--interval", type=int, help="raw adv interval index")
     s.add_argument("--tx-power", type=int, choices=range(0, 8), help="global TX power level 0-7")
+    s.add_argument("--trigger", choices=sorted(TRIGGER_CODES),
+                   help="trigger action (unspecified keeps the current one)")
+    s.add_argument("--trigger-seconds", type=int, default=None, choices=range(1, 101),
+                   metavar="1-100",
+                   help=f"advertising duration once triggered (default: {DEFAULT_TRIGGER_SECONDS})")
+
+    s = add("set-trigger", help="set or clear the iBeacon trigger action on a slot")
+    s.add_argument("--slot", type=int, required=True, choices=range(1, 8))
+    s.add_argument("trigger", choices=sorted(TRIGGER_CODES))
+    s.add_argument("--seconds", type=int, default=DEFAULT_TRIGGER_SECONDS, choices=range(1, 101),
+                   metavar="1-100",
+                   help=f"advertising duration once triggered (default: {DEFAULT_TRIGGER_SECONDS})")
 
     s = add("set-uid", help="write an Eddystone-UID frame")
     s.add_argument("--slot", type=int, required=True, choices=range(1, 8))

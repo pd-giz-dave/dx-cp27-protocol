@@ -93,8 +93,53 @@ re-reading values after a save or refreshing its UI.
     0x84	  UID adv interval	     1 byte, 100mS steps, eg. 3==300mS
     0x85	  TX power (global)	     1 byte, 0..7 steps across -19.5dBm..+2.5dBm
     0xA0	  Save	                 none
+    0xA1	  Read trigger	         Reply: 2 bytes, trigger type + advertising duration (seconds)
+    0xA2	  Set trigger	         Data: 2 bytes, trigger type + advertising duration (seconds)
     0xFF	  Pre-edit query / set slot empty (after select)
                                      none
+
+### Trigger (0xA1 / 0xA2)
+
+Discovered from a capture that set an iBeacon slot's trigger to each of its four options in turn:
+double-click, triple-click, device-move, then off. The trigger fires a one-shot advertisement on
+that event; the second data byte is how long it then advertises, in seconds.
+
+0xA2 is "save with trigger enabled." It takes the place of the 0xA0 save in the edit sequence
+(select slot, resend all iBeacon fields 0x74-0x79, then this, then 0x60 apply) and carries two
+data bytes, mode and seconds:
+
+    4e4f a2 02 <mode> <seconds> <chk>
+
+    Write          Mode   What it set
+    a2 02 01 1e    01     double-click
+    a2 02 02 1e    02     triple-click
+    a2 02 03 1e    03     device-move
+
+The seconds byte (0x1e = 30) was only entered once via the app UI (on the double-click edit), so
+it was simply resent unchanged for the later modes - it's a genuine field, not a fixed constant.
+
+0xA0 is "save with trigger disabled": the final "off" edit ran the identical field sequence but
+ended with a plain 0xA0 instead of 0xA2, and the trigger turned off. So 0xA0 and 0xA2 are two
+forms of the same save step - 0xA2 enables the trigger, 0xA0 clears it.
+
+0xA1 reads the trigger config outside of an edit session (`4e4f a1 00`) and returns 2 raw bytes,
+mode and seconds, matching whatever 0xA2 last wrote.
+
+The iBeacon frame's "reserved" trailer is the trigger state, not padding: enabled flag, mode,
+seconds. E.g. in the 0x62 reads: `...03 02 00 00 00` is off, `...03 02 01 01 1e` is on/double-click/30s.
+So the full trailer is: adv interval, global TX power, trigger-enabled, trigger-mode, trigger-seconds.
+
+    Mode  Meaning
+    0x00  off (via 0xA0 save, no 0xA2 call)
+    0x01  double-click
+    0x02  triple-click
+    0x03  device-move
+
+Note: round-tripping this live (write via 0xA2, then read back via 0xA1 or the 0x62 frame) hasn't
+been fully reliable in testing - sometimes the just-written value reads back correctly after a
+reconnect, sometimes it doesn't. Not yet confirmed whether this is a timing issue (the beacon
+needs longer to persist to flash than our apply ack suggests) or whether 0xA1 reflects the state
+of the last-fired trigger event rather than the stored configuration.
 
 ### Frame types
 
