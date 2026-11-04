@@ -141,6 +141,17 @@ reconnect, sometimes it doesn't. Not yet confirmed whether this is a timing issu
 needs longer to persist to flash than our apply ack suggests) or whether 0xA1 reflects the state
 of the last-fired trigger event rather than the stored configuration.
 
+Update: live testing confirmed the fix - the app's own sequence calls 0xA1 (ignoring its reply)
+between 0xA2 and the 0x60 apply, and without that call the trigger change doesn't commit. With it,
+writes verified reliably via the frame trailer across multiple reconnects. dxbeacon.py's
+set_ibeacon()/set_uid() both do this now.
+
+The capture only ever exercised this on an iBeacon slot. Eddystone-UID frames (0x63) share the
+same trailer layout (interval, TX power, trigger-enabled, trigger-mode, trigger-seconds - see
+_params in dxbeacon.py) and the same 0xA0/0xA1/0xA2 save commands, so dxbeacon.py applies the
+identical trigger logic to `set-uid`/`set-trigger` on UID slots by symmetry. This hasn't been
+independently confirmed against a UID-specific capture.
+
 ### Frame types
 
 0x62 is iBeacon. 

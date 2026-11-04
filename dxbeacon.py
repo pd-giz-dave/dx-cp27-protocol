@@ -217,20 +217,32 @@ class DXBeacon:
 
     # ---- writes ----
 
-    async def set_ibeacon(self, slot, uuid, major, minor, mpower, interval, tx,
-                           trigger=None, trigger_seconds=None):
+    async def _resolve_trigger(self, read_cmd, trigger, trigger_seconds):
         # trigger=None keeps whatever trigger is currently set. Passing a type
         # code (see TRIGGER_NAMES) changes it; 0 ("off") clears it.
         # trigger_seconds is how long the beacon advertises once triggered, 1-100.
-        # 0xA1 ("read trigger") returns junk - the iBeacon frame's own trailer
-        # is the only reliable way to read the current trigger back.
+        # 0xA1 ("read trigger") returns junk - the frame's own trailer is the
+        # only reliable way to read the current trigger back.
         if trigger is None:
-            cur = parse_frame(await self.send(0x62))
+            cur = parse_frame(await self.send(read_cmd))
             trigger = TRIGGER_CODES.get(cur.get("trigger"), 0)
             trigger_seconds = cur.get("trigger_seconds", DEFAULT_TRIGGER_SECONDS)
         elif trigger_seconds is None:
             trigger_seconds = DEFAULT_TRIGGER_SECONDS
+        return trigger, trigger_seconds
 
+    async def _save(self, trigger, trigger_seconds):
+        if trigger:
+            await self.send_ack(0xA2, bytes([trigger, trigger_seconds]))  # set trigger + save
+            await self.send(0xA1)  # app always reads it back here; reply is junk, but the
+                                    # firmware seems to need this call before 0x60 or the
+                                    # trigger doesn't actually commit. Ignore the reply.
+        else:
+            await self.send_ack(0xA0)  # save (also clears any trigger)
+
+    async def set_ibeacon(self, slot, uuid, major, minor, mpower, interval, tx,
+                           trigger=None, trigger_seconds=None):
+        trigger, trigger_seconds = await self._resolve_trigger(0x62, trigger, trigger_seconds)
         await self.send_ack(0x10 + slot)
         await self.send(0x62, expect_reply=False)  # set slot frame type
         await self.send_ack(0x74, uuid)
@@ -239,16 +251,12 @@ class DXBeacon:
         await self.send_ack(0x77, mpower.to_bytes(1, "big", signed=True))
         await self.send_ack(0x78, bytes([interval]))
         await self.send_ack(0x79, bytes([tx]))
-        if trigger:
-            await self.send_ack(0xA2, bytes([trigger, trigger_seconds]))  # set trigger + save
-            await self.send(0xA1)  # app always reads it back here; reply is junk, but the
-                                    # firmware seems to need this call before 0x60 or the
-                                    # trigger doesn't actually commit. Ignore the reply.
-        else:
-            await self.send_ack(0xA0)  # save (also clears any trigger)
+        await self._save(trigger, trigger_seconds)
         await self.send_ack(0x60)  # apply
 
-    async def set_uid(self, slot, namespace, instance, mpower, interval, tx):
+    async def set_uid(self, slot, namespace, instance, mpower, interval, tx,
+                       trigger=None, trigger_seconds=None):
+        trigger, trigger_seconds = await self._resolve_trigger(0x63, trigger, trigger_seconds)
         await self.send_ack(0x10 + slot)
         await self.send(0x63, expect_reply=False)
         await self.send_ack(0x81, namespace)
@@ -256,8 +264,8 @@ class DXBeacon:
         await self.send_ack(0x83, mpower.to_bytes(1, "big", signed=True))
         await self.send_ack(0x84, bytes([interval]))
         await self.send_ack(0x85, bytes([tx]))
-        await self.send_ack(0xA0)
-        await self.send_ack(0x60)
+        await self._save(trigger, trigger_seconds)
+        await self.send_ack(0x60)  # apply
 
     async def delete_slot(self, slot):
         await self.send(0xFF)                       # app always sends this first
@@ -366,16 +374,25 @@ async def run(args):
             print_dict(await b.read_frame(0x62))
 
         elif args.command == "set-trigger":
-            try:
+            slots = await b.read_slots()
+            frame_type = slots[args.slot - 1]
+            trigger = TRIGGER_CODES[args.trigger]
+            if frame_type == 0x62:
                 cur = await b.read_frame(0x62)
-            except ProtocolError:
-                sys.exit("No existing iBeacon frame on this slot - set one with 'set-ibeacon' first")
-            await b.set_ibeacon(args.slot, hexbytes(cur["uuid"], 16),
-                                cur["major"], cur["minor"], cur["measured_power"],
-                                cur["interval"], cur["tx_power"],
-                                trigger=TRIGGER_CODES[args.trigger], trigger_seconds=args.seconds)
-            print(f"Trigger set to {args.trigger!r}. New iBeacon frame:")
-            print_dict(await b.read_frame(0x62))
+                await b.set_ibeacon(args.slot, hexbytes(cur["uuid"], 16),
+                                    cur["major"], cur["minor"], cur["measured_power"],
+                                    cur["interval"], cur["tx_power"],
+                                    trigger=trigger, trigger_seconds=args.seconds)
+            elif frame_type == 0x63:
+                cur = await b.read_frame(0x63)
+                await b.set_uid(args.slot, hexbytes(cur["namespace"]), hexbytes(cur["instance"]),
+                                cur["measured_power"], cur["interval"], cur["tx_power"],
+                                trigger=trigger, trigger_seconds=args.seconds)
+            else:
+                sys.exit(f"Slot {args.slot} is {FRAME_NAMES.get(frame_type, f'0x{frame_type:02x}')} "
+                         "- trigger is only supported on iBeacon and Eddystone-UID frames")
+            print(f"Trigger set to {args.trigger!r}. New frame:")
+            print_dict(await b.read_frame(frame_type))
 
         elif args.command == "set-uid":
             cur = {}
@@ -389,11 +406,13 @@ async def run(args):
                 if name in cur:
                     return conv(cur[name])
                 sys.exit(f"--{name.replace('_', '-')} is required (no existing UID frame to copy from)")
+            trigger = TRIGGER_CODES[args.trigger] if args.trigger is not None else None
             await b.set_uid(args.slot,
                             pick("namespace", args.namespace, lambda h: hexbytes(h, 10)),
                             pick("instance", args.instance, lambda h: hexbytes(h, 6)),
                             pick("measured_power", args.measured_power),
-                            pick("interval", args.interval), pick("tx_power", args.tx_power))
+                            pick("interval", args.interval), pick("tx_power", args.tx_power),
+                            trigger=trigger, trigger_seconds=args.trigger_seconds)
             print("Done. New UID frame:")
             print_dict(await b.read_frame(0x63))
 
@@ -472,7 +491,7 @@ def main():
                    metavar="1-100",
                    help=f"advertising duration once triggered (default: {DEFAULT_TRIGGER_SECONDS})")
 
-    s = add("set-trigger", help="set or clear the iBeacon trigger action on a slot")
+    s = add("set-trigger", help="set or clear the trigger action on an iBeacon or Eddystone-UID slot")
     s.add_argument("--slot", type=int, required=True, choices=range(1, 8))
     s.add_argument("trigger", choices=sorted(TRIGGER_CODES))
     s.add_argument("--seconds", type=int, default=DEFAULT_TRIGGER_SECONDS, choices=range(1, 101),
@@ -486,6 +505,11 @@ def main():
     s.add_argument("--measured-power", type=int, help="RSSI at 0 m, e.g. -24")
     s.add_argument("--interval", type=int)
     s.add_argument("--tx-power", type=int, choices=range(0, 8))
+    s.add_argument("--trigger", choices=sorted(TRIGGER_CODES),
+                   help="trigger action (unspecified keeps the current one)")
+    s.add_argument("--trigger-seconds", type=int, default=None, choices=range(1, 101),
+                   metavar="1-100",
+                   help=f"advertising duration once triggered (default: {DEFAULT_TRIGGER_SECONDS})")
 
     s = add("delete-slot", help="clear a slot")
     s.add_argument("slot", type=int, choices=range(1, 8))
