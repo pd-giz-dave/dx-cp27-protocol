@@ -30,7 +30,7 @@ time it connects.
     0x0001–0x0005	GAP	                Device Name, Appearance
     0x0006–0x0009	GATT	            Service Changed + CCCD
     0x000a–0x000d	Battery	            Battery Level (notifiable)
-    0x000e–0x001a	Device Information	Manufacturer, Model, FW/SW revision, System ID, PnP ID
+    0x000e–0x001a	Device Information	Manufacturer, Model, Firmware/Hardware revision, System ID, PnP ID
     0x001b–0x0025	Custom (vendor)	    The config protocol lives here
 
 The custom service has three characteristics.
@@ -77,10 +77,15 @@ re-reading values after a save or refreshing its UI.
     0x23	  Power off	             none
     0x24	  Change password	     ASCII password
     0x25	  Pre-auth check	     none
-    0x30	  Device info	         Reply: battery (mV, LE), MAC, manufacturer, chip, model, FW/SW versions
+    0x30	  Device info	         Reply: battery (mV, LE), MAC, manufacturer, chip, model, firmware/hardware versions
     0x60	  Apply	                 none
     0x61–0x65 Read frame (outside a slot edit) / set frame type (after select)
                                      none
+    0x66	  Read/set ACC (accelerometer) frame  none (see Frame types below)
+    0x67	  Read/set User (arbitrary data) frame  none (see Frame types below)
+    0x71	  Device name	         ASCII, variable length (28 bytes max, firmware zero-pads)
+    0x72	  Device name adv interval  1 byte
+    0x73	  Device name TX power (global)  1 byte, 0–7
     0x74	  iBeacon UUID	         16 bytes
     0x75	  iBeacon major	         2 bytes, big-endian
     0x76	  iBeacon minor	         2 bytes, big-endian
@@ -92,6 +97,11 @@ re-reading values after a save or refreshing its UI.
     0x83	  UID measured power	 1 byte, signed dBm
     0x84	  UID adv interval	     1 byte, 100mS steps, eg. 3==300mS
     0x85	  TX power (global)	     1 byte, 0..7 steps across -19.5dBm..+2.5dBm
+    0x93	  ACC frame adv interval   1 byte
+    0x94	  ACC frame TX power	 1 byte, 0–7
+    0x95	  User frame data	     ASCII/hex, variable length (22 bytes max, firmware zero-pads)
+    0x96	  User frame adv interval  1 byte
+    0x97	  User frame TX power	 1 byte, 0–7
     0xA0	  Save	                 none
     0xA1	  Read trigger	         Reply: 2 bytes, trigger type + advertising duration (seconds)
     0xA2	  Set trigger	         Data: 2 bytes, trigger type + advertising duration (seconds)
@@ -152,6 +162,44 @@ _params in dxbeacon.py) and the same 0xA0/0xA1/0xA2 save commands, so dxbeacon.p
 identical trigger logic to `set-uid`/`set-trigger` on UID slots by symmetry. This hasn't been
 independently confirmed against a UID-specific capture.
 
+Update: a second, independent capture (snooped_data-device-info.txt) set a device-name slot's
+(0x61) trigger to double-click/53s using the exact same 0xA2 02 <mode> <seconds> / 0xA1 / 0x60
+sequence, confirming the save mechanism isn't iBeacon-specific. dxbeacon.py's `set_name()` and
+`set-trigger` now apply it to device-name slots too.
+
+### Two more frame types (ACC / 0x66, and User / 0x67), and a save-failure notification
+
+A capture (snooped_data-frame-type.txt) of the app's frame-type picker turned up two frame type
+codes beyond the original five (0x61-0x65):
+
+0x66 is the ACC (accelerometer) frame, confirmed directly by the user's own device: setting a
+device-name-only slot's trigger with an ACC frame in another slot made the beacon only become
+connectable around a trigger event (e.g. a double-click), rather than continuously - worth knowing
+if a slot ever seems to "disappear" after editing. It has no fields of its own - reading it returns
+just the common trailer (interval, TX power, trigger), like TLM. It's written through its own
+opcodes though: 0x93 sets the interval, 0x94 sets TX power, then the usual 0xA0/0xA2 save and 0x60
+apply. dxbeacon.py exposes it as `set-acc`.
+
+0x67 is the User frame: an arbitrary 22-byte data field (set via 0x95), plus the usual interval
+(0x96) and TX power (0x97), then the standard 0xA0/0xA2 save and 0x60 apply. The frame-type-picker
+capture's attempt to use it was rejected by the firmware (see the save-failure note below) because
+the frame type it tried to assign was already in use on another slot - not because 0x67 itself is
+invalid. A second capture (snooped_data-with-user.txt), assigning it to an empty slot, applied
+cleanly and read back correctly afterwards, confirming the field layout: `data` (0x95, hex, 22 bytes
+max, firmware zero-pads), then the common interval/TX/trigger trailer. dxbeacon.py exposes it as
+`set-user`.
+
+Save failures show up as a notification on a *different* command byte than the one you sent, with
+data 0x00 instead of the usual 0x01: writing 0x60 (apply) after setting a slot to 0x67 got back
+`4E4F F1 01 00 F0` instead of the expected `4E4F 60 01 01 60` ack. A second attempt (assigning the
+already-used 0x61 device-name type to a second slot) failed the same way with `4E4F F2 01 00 F3`.
+Both attempts left the slot unchanged (still empty) when re-read afterwards. This suggests two
+things: first, that 0xF1/0xF2 are generic "the save was rejected" notifications rather than echoes
+of the command that failed; second, and more useful going forward, that **a frame type can only be
+assigned to one slot at a time** - trying to put the same type on a second slot fails outright.
+dxbeacon.py doesn't check for this ahead of time; if you hit it, the write functions raise
+ProtocolError showing the raw rejection bytes.
+
 ### Frame types
 
 0x62 is iBeacon. 
@@ -167,8 +215,10 @@ then 00 00 00. Your writes map onto it directly:
     0x78	Param A	        03
     0x79	Param B	        06 → 07
 
-0x61 is probably a device-name frame. 
-It contains “CP27-4236”, zero-padded to 28 bytes, plus the two parameter bytes.
+0x61 is the device-name frame, confirmed by a later capture (snooped_data-device-info.txt) that
+set it directly. It contains the name, zero-padded to 28 bytes, plus the two parameter bytes.
+Writing it uses 0x71 (name, sent as whatever length was typed - the firmware does the zero-padding
+on its own), 0x72 (adv interval) and 0x73 (TX power), then the usual 0xA0/0xA2 save and 0x60 apply.
 
 ### Commands (phone → beacon, written to 0x0021) look like this:
 
@@ -192,11 +242,12 @@ so it’s probably a “connected / auth needed” check.
 
 ### Device info (0x30)
 
-The response contains AE 0B, which is unknown (perhaps flags or battery). 
+The response starts with AE 0B, which is the battery level in millivolts, little-endian: 
+0x0BAE = 2990 mV. 
 Next comes the MAC address 48:87:2D:9E:42:36, whose OUI matches the “ShenZhenDaXi” vendor that 
 Wireshark identified. 
-Then come four strings: “DX-SMART”, “Dialog14531” (the DA14531 chip), “CP27”, and the version 
-strings “V2.4.01” and “V2.4.0”.
+Then come four strings: “DX-SMART”, “Dialog14531” (the DA14531 chip), “CP27”, and the firmware 
+version “V2.4.01” and hardware version “V2.4.0”.
 
 ### Protocol summary
 
