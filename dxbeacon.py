@@ -85,6 +85,15 @@ UID_FIELD_MPOWER = 0x83
 UID_FIELD_INTERVAL = 0x84
 UID_FIELD_TX_POWER = 0x85
 
+URL_FIELD_SCHEME = 0x86
+URL_FIELD_BODY = 0x87        # variable length; firmware zero-pads to 17 bytes
+URL_FIELD_MPOWER = 0x88
+URL_FIELD_INTERVAL = 0x89
+URL_FIELD_TX_POWER = 0x8A
+
+TLM_FIELD_INTERVAL = 0x91
+TLM_FIELD_TX_POWER = 0x92
+
 ACC_FIELD_INTERVAL = 0x93
 ACC_FIELD_TX_POWER = 0x94
 
@@ -150,6 +159,33 @@ def decode_url(field: bytes) -> str:
     for b in stripped:
         out.append(URL_EXPANSIONS[b] if b < len(URL_EXPANSIONS) else chr(b))
     return scheme + "".join(out)
+
+
+def encode_url(url: str) -> tuple:
+    # Reverse of decode_url: split off the scheme, then abbreviate any
+    # recognized TLD suffix (longest match first, e.g. ".com/" before
+    # ".com") back down to its single-byte code.
+    for code, prefix in sorted(URL_SCHEMES.items(), key=lambda kv: -len(kv[1])):
+        if url.startswith(prefix):
+            scheme, rest = code, url[len(prefix):]
+            break
+    else:
+        raise ValueError(f"unsupported URL scheme in {url!r} (need one of {sorted(URL_SCHEMES.values())})")
+    body = bytearray()
+    i = 0
+    expansions = sorted(enumerate(URL_EXPANSIONS), key=lambda ce: -len(ce[1]))
+    while i < len(rest):
+        for code, exp in expansions:
+            if rest.startswith(exp, i):
+                body.append(code)
+                i += len(exp)
+                break
+        else:
+            body.append(ord(rest[i]))
+            i += 1
+    if len(body) > 17:
+        raise ValueError("URL body too long (17 bytes max after scheme/TLD abbreviation)")
+    return scheme, bytes(body)
 
 
 def parse_frame(data: bytes) -> dict:
@@ -310,12 +346,36 @@ class DXBeacon:
     async def set_acc(self, slot, interval, tx, trigger=None, trigger_seconds=None):
         # ACC (accelerometer) frame. Like TLM it has no fields beyond the
         # common trailer, but it's written through its own opcodes rather
-        # than TLM's (there's no capture of TLM being written at all).
+        # than TLM's.
         trigger, trigger_seconds = await self._resolve_trigger(FRAME_ACC, trigger, trigger_seconds)
         await self.send_ack(SLOT_SELECT_BASE + slot)
         await self.send(FRAME_ACC, expect_reply=False)  # set slot frame type
         await self.send_ack(ACC_FIELD_INTERVAL, bytes([interval]))
         await self.send_ack(ACC_FIELD_TX_POWER, bytes([tx]))
+        await self._save(trigger, trigger_seconds)
+        await self.send_ack(CMD_APPLY)
+
+    async def set_tlm(self, slot, interval, tx, trigger=None, trigger_seconds=None):
+        # Eddystone-TLM frame. No fields of its own beyond the common
+        # trailer, written through its own opcodes (not ACC's).
+        trigger, trigger_seconds = await self._resolve_trigger(FRAME_TLM, trigger, trigger_seconds)
+        await self.send_ack(SLOT_SELECT_BASE + slot)
+        await self.send(FRAME_TLM, expect_reply=False)  # set slot frame type
+        await self.send_ack(TLM_FIELD_INTERVAL, bytes([interval]))
+        await self.send_ack(TLM_FIELD_TX_POWER, bytes([tx]))
+        await self._save(trigger, trigger_seconds)
+        await self.send_ack(CMD_APPLY)
+
+    async def set_url(self, slot, url, mpower, interval, tx, trigger=None, trigger_seconds=None):
+        scheme, body = encode_url(url)
+        trigger, trigger_seconds = await self._resolve_trigger(FRAME_URL, trigger, trigger_seconds)
+        await self.send_ack(SLOT_SELECT_BASE + slot)
+        await self.send(FRAME_URL, expect_reply=False)  # set slot frame type
+        await self.send_ack(URL_FIELD_SCHEME, bytes([scheme]))
+        await self.send_ack(URL_FIELD_BODY, body)
+        await self.send_ack(URL_FIELD_MPOWER, mpower.to_bytes(1, "big", signed=True))
+        await self.send_ack(URL_FIELD_INTERVAL, bytes([interval]))
+        await self.send_ack(URL_FIELD_TX_POWER, bytes([tx]))
         await self._save(trigger, trigger_seconds)
         await self.send_ack(CMD_APPLY)
 
@@ -512,10 +572,19 @@ async def run(args):
                 cur = await b.read_frame(FRAME_USER)
                 await b.set_user(args.slot, hexbytes(cur["data"]), cur["interval"], cur["tx_power"],
                                  trigger=trigger, trigger_seconds=args.seconds)
+            elif frame_type == FRAME_URL:
+                cur = await b.read_frame(FRAME_URL)
+                await b.set_url(args.slot, cur["url"], cur["measured_power"],
+                                cur["interval"], cur["tx_power"],
+                                trigger=trigger, trigger_seconds=args.seconds)
+            elif frame_type == FRAME_TLM:
+                cur = await b.read_frame(FRAME_TLM)
+                await b.set_tlm(args.slot, cur["interval"], cur["tx_power"],
+                                trigger=trigger, trigger_seconds=args.seconds)
             else:
                 sys.exit(f"Slot {args.slot} is {FRAME_NAMES.get(frame_type, f'0x{frame_type:02x}')} "
                          "- trigger is only supported on device-name, iBeacon, Eddystone-UID, "
-                         "ACC and User frames")
+                         "Eddystone-URL, Eddystone-TLM, ACC and User frames")
             print(f"Trigger set to {args.trigger!r}. New frame:")
             print_dict(await b.read_frame(frame_type))
 
@@ -579,6 +648,47 @@ async def run(args):
                             trigger=trigger, trigger_seconds=args.trigger_seconds)
             print("Done. New UID frame:")
             print_dict(await b.read_frame(FRAME_UID))
+
+        elif args.command == "set-url":
+            cur = {}
+            try:
+                cur = await b.read_frame(FRAME_URL)
+            except ProtocolError:
+                pass
+            def pick(name, given, conv=lambda x: x):
+                if given is not None:
+                    return given
+                if name in cur:
+                    return conv(cur[name])
+                sys.exit(f"--{name.replace('_', '-')} is required (no existing URL frame to copy from)")
+            trigger = TRIGGER_CODES[args.trigger] if args.trigger is not None else None
+            try:
+                await b.set_url(args.slot, pick("url", args.url),
+                                pick("measured_power", args.measured_power),
+                                pick("interval", args.interval), pick("tx_power", args.tx_power),
+                                trigger=trigger, trigger_seconds=args.trigger_seconds)
+            except ValueError as e:
+                sys.exit(str(e))
+            print("Done. New URL frame:")
+            print_dict(await b.read_frame(FRAME_URL))
+
+        elif args.command == "set-tlm":
+            cur = {}
+            try:
+                cur = await b.read_frame(FRAME_TLM)
+            except ProtocolError:
+                pass
+            def pick(name, given, conv=lambda x: x):
+                if given is not None:
+                    return given
+                if name in cur:
+                    return conv(cur[name])
+                sys.exit(f"--{name.replace('_', '-')} is required (no existing TLM frame to copy from)")
+            trigger = TRIGGER_CODES[args.trigger] if args.trigger is not None else None
+            await b.set_tlm(args.slot, pick("interval", args.interval), pick("tx_power", args.tx_power),
+                            trigger=trigger, trigger_seconds=args.trigger_seconds)
+            print("Done. New TLM frame:")
+            print_dict(await b.read_frame(FRAME_TLM))
 
         elif args.command == "set-user":
             cur = {}
@@ -681,7 +791,7 @@ def main():
 
     s = add("set-trigger",
             help="set or clear the trigger action on a device-name, iBeacon, Eddystone-UID, "
-                 "ACC or User slot")
+                 "Eddystone-URL, Eddystone-TLM, ACC or User slot")
     s.add_argument("--slot", type=int, required=True, choices=range(1, 8))
     s.add_argument("trigger", choices=sorted(TRIGGER_CODES))
     s.add_argument("--seconds", type=int, default=DEFAULT_TRIGGER_SECONDS, choices=range(1, 101),
@@ -729,6 +839,29 @@ def main():
     s.add_argument("--measured-power", type=int, help="RSSI at 0 m, e.g. -24")
     s.add_argument("--interval", type=int)
     s.add_argument("--tx-power", type=int, choices=range(0, 8))
+    s.add_argument("--trigger", choices=sorted(TRIGGER_CODES),
+                   help="trigger action (unspecified keeps the current one)")
+    s.add_argument("--trigger-seconds", type=int, default=None, choices=range(1, 101),
+                   metavar="1-100",
+                   help=f"advertising duration once triggered (default: {DEFAULT_TRIGGER_SECONDS})")
+
+    s = add("set-url", help="write an Eddystone-URL frame (unspecified fields keep current values)")
+    s.add_argument("--slot", type=int, required=True, choices=range(1, 8))
+    s.add_argument("--url", help="full URL, e.g. http://example.com/")
+    s.add_argument("--measured-power", type=int, help="RSSI at 0 m, e.g. -24")
+    s.add_argument("--interval", type=int)
+    s.add_argument("--tx-power", type=int, choices=range(0, 8))
+    s.add_argument("--trigger", choices=sorted(TRIGGER_CODES),
+                   help="trigger action (unspecified keeps the current one)")
+    s.add_argument("--trigger-seconds", type=int, default=None, choices=range(1, 101),
+                   metavar="1-100",
+                   help=f"advertising duration once triggered (default: {DEFAULT_TRIGGER_SECONDS})")
+
+    s = add("set-tlm",
+            help="write the Eddystone-TLM frame - has no fields beyond interval/TX/trigger")
+    s.add_argument("--slot", type=int, required=True, choices=range(1, 8))
+    s.add_argument("--interval", type=int, help="raw adv interval index")
+    s.add_argument("--tx-power", type=int, choices=range(0, 8), help="global TX power level 0-7")
     s.add_argument("--trigger", choices=sorted(TRIGGER_CODES),
                    help="trigger action (unspecified keeps the current one)")
     s.add_argument("--trigger-seconds", type=int, default=None, choices=range(1, 101),

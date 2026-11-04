@@ -97,6 +97,14 @@ re-reading values after a save or refreshing its UI.
     0x83	  UID measured power	 1 byte, signed dBm
     0x84	  UID adv interval	     1 byte, 100mS steps, eg. 3==300mS
     0x85	  TX power (global)	     1 byte, 0..7 steps across -19.5dBm..+2.5dBm
+    0x86	  URL scheme	         1 byte, index into http://www. / https://www. / http:// / https://
+    0x87	  URL body	             ASCII, variable length (17 bytes max, firmware zero-pads; known
+                                     TLD suffixes like ".com/" get abbreviated to a single byte)
+    0x88	  URL measured power	 1 byte, signed dBm
+    0x89	  URL adv interval	     1 byte
+    0x8A	  TX power (global)	     1 byte, 0–7
+    0x91	  TLM frame adv interval   1 byte
+    0x92	  TLM frame TX power	 1 byte, 0–7
     0x93	  ACC frame adv interval   1 byte
     0x94	  ACC frame TX power	 1 byte, 0–7
     0x95	  User frame data	     ASCII/hex, variable length (22 bytes max, firmware zero-pads)
@@ -200,6 +208,35 @@ assigned to one slot at a time** - trying to put the same type on a second slot 
 dxbeacon.py doesn't check for this ahead of time; if you hit it, the write functions raise
 ProtocolError showing the raw rejection bytes.
 
+### Eddystone-URL and Eddystone-TLM writes
+
+A capture (snooped_data-more-frames.txt) of the app editing a slot already set to Eddystone-URL,
+then one already set to Eddystone-TLM, filled in the two remaining gaps:
+
+Eddystone-URL writes through 0x86 (scheme, one byte: an index into the same `URL_SCHEMES` table
+`decode_url` already used for reads), 0x87 (the URL body as ASCII, 17 bytes max, firmware
+zero-pads), 0x88 (measured power, signed), 0x89 (adv interval) and 0x8A (TX power), then the usual
+0xA0/0xA2 save and 0x60 apply. The body field reuses the same TLD-abbreviation scheme as reads -
+the app sent `en.szdx-smart` (13 bytes, no explicit terminator) for `http://en.szdx-smart.com/`,
+relying on the firmware's zero-padding to supply the trailing ".com/" (byte 0x00, which is both
+the padding byte and the ".com/" expansion code - see `decode_url`'s comment on this ambiguity).
+dxbeacon.py's `encode_url()` (the reverse of `decode_url()`) instead abbreviates the suffix
+explicitly into the body it sends; both approaches decode back to the same URL. Exposed as
+`set-url`.
+
+Eddystone-TLM has no fields of its own - like ACC, reading it returns just the common
+interval/TX/trigger trailer - but it has its own write opcodes: 0x91 (adv interval) and 0x92 (TX
+power), then the usual save/apply. Exposed as `set-tlm`.
+
+One anomaly worth noting: immediately after writing the URL scheme field (0x86) on a slot whose
+frame type was already Eddystone-URL (i.e. re-editing rather than first-time assignment), the
+beacon sent *two* notifications - an ack for command 0x50 (`4E4F 50 01 01 50`, a command never
+written in the capture) immediately followed by the expected ack for 0x86. This didn't recur for
+any other field, including the equivalent TLM re-edit a few seconds later in the same capture, so
+it looks like a one-off firmware/BLE-stack quirk rather than a documented behaviour. dxbeacon.py
+doesn't special-case it; if it recurs in practice it would surface as a ProtocolError on the
+scheme-field write showing the stray `50 01 01 50` bytes.
+
 ### Frame types
 
 0x62 is iBeacon. 
@@ -269,9 +306,9 @@ runs on Linux, macOS and Windows without needing the DX-Smart app.
 - `scan` finds nearby beacons, matching by name or vendor MAC OUI since not every frame type
   advertises a name.
 - `read -a <address>` dumps all slots and device info in one go.
-- Each frame type has its own `set-*` subcommand - `set-ibeacon`, `set-uid`, `set-name`,
-  `set-acc`, `set-user` - that writes only the fields you pass and keeps the rest of the slot's
-  current values.
+- Each of the 7 frame types has its own `set-*` subcommand - `set-ibeacon`, `set-uid`, `set-url`,
+  `set-tlm`, `set-name`, `set-acc`, `set-user` - that writes only the fields you pass and keeps
+  the rest of the slot's current values.
 - `set-trigger` sets or clears the trigger action on whichever of those frame types is in a slot.
 - `set-password`, `factory-reset`, `power-off` and `delete-slot` cover the destructive/
   administrative commands.

@@ -1,0 +1,155 @@
+No.	Time	Delta	Source	Destination	Protocol	Length	Info
+1080	13.415792		ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	12	Rcvd Exchange MTU Request, Client Rx MTU: 256
+1082	13.421732	0.005940	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Device Name, Handles: 0x0001..0xffff
+1085	13.424521	0.002789	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	12	Sent Exchange MTU Response, Server Rx MTU: 517
+1107	13.510446	0.085925	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	22	Rcvd Read By Type Response, Attribute List Length: 1
+1109	13.512473	0.002027	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Appearance, Handles: 0x0001..0xffff
+1113	13.608893	0.096420	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	15	Rcvd Read By Type Response, Attribute List Length: 1
+1116	13.610874	0.001981	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Database Hash, Handles: 0x0001..0xffff
+1118	13.705912	0.095038	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0001 (Unknown)
+1120	13.709606	0.003694	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Group Type Request, Primary Service, Handles: 0x0001..0xffff
+1124	13.802828	0.093222	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	41	Rcvd Read By Group Type Response, Attribute List Length: 5, GAP, GATT, Battery, Device Information, Unknown
+1125	13.804797	0.001969	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Group Type Request, Primary Service, Handles: 0x0026..0xffff
+1130	13.900174	0.095377	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0026 (Unknown: Unknown)
+1131	13.901786	0.001612	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Include, Handles: 0x0001..0x0005
+1135	13.997809	0.096023	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0001 (GAP)
+1136	13.999430	0.001621	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0001..0x0005
+1139	14.061842	0.062412	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	25	Rcvd Read By Type Response, Attribute List Length: 2, Device Name, Appearance
+1140	14.064010	0.002168	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0005..0x0005
+1142	14.076894	0.012884	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0005 (GAP: Appearance)
+1143	14.079361	0.002467	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Include, Handles: 0x0006..0x0009
+1145	14.091419	0.012058	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0006 (GATT)
+1146	14.093577	0.002158	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0006..0x0009
+1148	14.106800	0.013223	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Read By Type Response, Attribute List Length: 1, Service Changed
+1149	14.109372	0.002572	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0008..0x0009
+1151	14.121968	0.012596	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0008 (GATT: Service Changed)
+1152	14.125433	0.003465	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	14	Sent Find Information Request, Handles: 0x0009..0x0009
+1154	14.136507	0.011074	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0009 (GATT: Service Changed: Client Characteristic Configuration)
+1155	14.138653	0.002146	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Include, Handles: 0x000a..0x000d
+1157	14.151445	0.012792	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000a (Battery)
+1158	14.153459	0.002014	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000a..0x000d
+1160	14.166635	0.013176	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Read By Type Response, Attribute List Length: 1, Battery Level
+1161	14.168303	0.001668	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000c..0x000d
+1163	14.181688	0.013385	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000c (Battery: Battery Level)
+1164	14.184750	0.003062	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	14	Sent Find Information Request, Handles: 0x000d..0x000d
+1166	14.196499	0.011749	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x000d (Battery: Battery Level: Client Characteristic Configuration)
+1167	14.198749	0.002250	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Include, Handles: 0x000e..0x001a
+1169	14.211847	0.013098	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x000e (Device Information)
+1170	14.213751	0.001904	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x000e..0x001a
+1172	14.226873	0.013122	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	53	Rcvd Read By Type Response, Attribute List Length: 6, Manufacturer Name String, Model Number String, Firmware Revision String, Software Revision String, System ID, PnP ID
+1173	14.228943	0.002070	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x001a..0x001a
+1175	14.241903	0.012960	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x001a (Device Information: PnP ID)
+1176	14.245867	0.003964	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Include, Handles: 0x001b..0x0025
+1178	14.256431	0.010564	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x001b (Unknown)
+1179	14.258697	0.002266	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x001b..0x0025
+1181	14.272520	0.013823	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	32	Rcvd Read By Type Response, Attribute List Length: 3, Unknown, Unknown, Unknown
+1182	14.274730	0.002210	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	16	Sent Read By Type Request, Characteristic, Handles: 0x0024..0x0025
+1184	14.286442	0.011712	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	14	Rcvd Error Response - Attribute Not Found, Handle: 0x0024 (Unknown: Unknown)
+1185	14.290528	0.004086	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	14	Sent Find Information Request, Handles: 0x001e..0x001f
+1187	14.301620	0.011092	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	19	Rcvd Find Information Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration), Handle: 0x001f (Unknown: Unknown: Characteristic User Description)
+1188	14.303911	0.002291	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	14	Sent Find Information Request, Handles: 0x0022..0x0022
+1190	14.316526	0.012615	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0022 (Unknown: Unknown: Characteristic User Description)
+1191	14.318608	0.002082	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	14	Sent Find Information Request, Handles: 0x0025..0x0025
+1193	14.331624	0.013016	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	15	Rcvd Find Information Response, Handle: 0x0025 (Unknown: Unknown: Characteristic User Description)
+1196	14.361467	0.029843	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	14	Sent Write Request, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+1198	14.376768	0.015301	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x001e (Unknown: Unknown: Client Characteristic Configuration)
+1202	14.512929	0.136161	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1204	14.525820	0.012891	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1205	14.526453	0.000633	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1256	22.004530	7.478077	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	18	Sent Write Request, Handle: 0x0024 (Unknown: Unknown)
+1258	22.024729	0.020199	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0024 (Unknown: Unknown)
+1259	22.139160	0.114431	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1261	22.159758	0.020598	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1262	22.160222	0.000464	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1263	22.309428	0.149206	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1265	22.340291	0.030863	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1266	22.341822	0.001531	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	46	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1267	22.499431	0.157609	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1269	22.521330	0.021899	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1270	22.522526	0.001196	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	39	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1271	22.680369	0.157843	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1273	22.700244	0.019875	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1274	22.701265	0.001021	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	35	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1276	22.848924	0.147659	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1278	22.880372	0.031448	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1279	22.881543	0.001171	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	37	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1281	23.033627	0.152084	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1283	23.060736	0.027109	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1284	23.061833	0.001097	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1287	23.218710	0.156877	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1293	23.240454	0.021744	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1294	23.241456	0.001002	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1295	23.403888	0.162432	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1297	23.435532	0.031644	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1298	23.451504	0.015972	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	40	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1299	23.604716	0.153212	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1301	23.630318	0.025602	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1302	23.631480	0.001162	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	15	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1303	23.789429	0.157949	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1305	23.810635	0.021206	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1306	23.811434	0.000799	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	73	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1307	24.085741	0.274307	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1309	24.109749	0.024008	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1310	24.110187	0.000438	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1351	31.046756	6.936569	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1353	31.069937	0.023181	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1354	31.071248	0.001311	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	37	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1410	43.707962	12.636714	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1414	43.730172	0.022210	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1415	43.746025	0.015853	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1416	43.909477	0.163452	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1418	43.940137	0.030660	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1419	44.110706	0.170569	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	18	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1421	44.135587	0.024881	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1422	44.136603	0.001016	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1423	44.137372	0.000769	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1424	44.317067	0.179695	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	30	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1426	44.345330	0.028263	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1427	44.345891	0.000561	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1428	44.516520	0.170629	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	18	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1430	44.540653	0.024133	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1431	44.541630	0.000977	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1432	44.716486	0.174856	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	18	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1434	44.735287	0.018801	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1435	44.735923	0.000636	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1436	44.921467	0.185544	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	18	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1438	44.945635	0.024168	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1439	44.946943	0.001308	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1440	45.123003	0.176060	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1447	45.170802	0.047799	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1448	45.171788	0.000986	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1449	45.324403	0.152615	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1451	45.351210	0.026807	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1452	45.352125	0.000915	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1466	47.606846	2.254721	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1468	47.630107	0.023261	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1469	47.630762	0.000655	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1470	47.655899	0.025137	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1472	47.675707	0.019808	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1473	47.676588	0.000881	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	37	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1476	49.693501	2.016913	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1478	49.715241	0.021740	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1479	49.715744	0.000503	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1518	58.373095	8.657351	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1520	58.400423	0.027328	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1521	58.401017	0.000594	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1526	58.574832	0.173815	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1528	58.595494	0.020662	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1530	58.780091	0.184597	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	18	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1532	58.805394	0.025303	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1533	58.805970	0.000576	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1534	58.981859	0.175889	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	18	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1536	59.000871	0.019012	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1537	59.001651	0.000780	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1538	59.182660	0.181009	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1540	59.211032	0.028372	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1541	59.212255	0.001223	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1542	59.385122	0.172867	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1544	59.405617	0.020495	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1545	59.421371	0.015754	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1553	61.647403	2.226032	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1555	61.670426	0.023023	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1556	61.670903	0.000477	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	19	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
+1557	61.683243	0.012340	SamsungElect_e6:ab:ef (Galaxy XCover7)	ShenZhenDaXi_9e:42:36 ()	ATT	17	Sent Write Request, Handle: 0x0021 (Unknown: Unknown)
+1559	61.715769	0.032526	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	10	Rcvd Write Response, Handle: 0x0021 (Unknown: Unknown)
+1560	61.731234	0.015465	ShenZhenDaXi_9e:42:36 ()	SamsungElect_e6:ab:ef (Galaxy XCover7)	ATT	18	Rcvd Handle Value Notification, Handle: 0x001d (Unknown: Unknown)
