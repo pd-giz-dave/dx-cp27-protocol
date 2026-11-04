@@ -259,3 +259,23 @@ version “V2.4.01” and hardware version “V2.4.0”.
 5. To edit a slot: 0x1N to select it, then the frame type byte (or FF to delete), 
    then the field writes (0x7x for iBeacon, 0x8x for UID), then A0 to save and 60 to apply.
 6. Other commands: 0x24 changes the password, 0x21 is a factory reset, and 0x23 disconnects.
+
+## dxbeacon.py
+
+`dxbeacon.py` is a command-line implementation of everything above, built incrementally as each
+piece of the protocol was reverse-engineered from a new capture. It uses `bleak` for BLE, so it
+runs on Linux, macOS and Windows without needing the DX-Smart app.
+
+- `scan` finds nearby beacons, matching by name or vendor MAC OUI since not every frame type
+  advertises a name.
+- `read -a <address>` dumps all slots and device info in one go.
+- Each frame type has its own `set-*` subcommand - `set-ibeacon`, `set-uid`, `set-name`,
+  `set-acc`, `set-user` - that writes only the fields you pass and keeps the rest of the slot's
+  current values.
+- `set-trigger` sets or clears the trigger action on whichever of those frame types is in a slot.
+- `set-password`, `factory-reset`, `power-off` and `delete-slot` cover the destructive/
+  administrative commands.
+- `raw` sends an arbitrary command byte, for poking at anything not yet wrapped in a proper
+  subcommand.
+
+Run `dxbeacon.py -h` or `dxbeacon.py <command> -h` for the full option list.
